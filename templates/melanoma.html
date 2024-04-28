@@ -43,7 +43,7 @@
 
     .small-button {
       padding: 8px 12px;
-      /* Adjust the padding to make the button smaller */
+      
     }
 
     .image-grid {
@@ -100,7 +100,7 @@
       <button onclick="predict()" class="small-button">Predict</button>
     </div>
     <div id="predictionResult" class="image-grid">
-      <!-- Placeholder for predicted disease -->
+      
       <p id="predictedDisease"></p>
     </div>
   </div>
@@ -120,9 +120,9 @@
       })
         .then(response => response.json())
         .then(data => {
-          // Get the predicted class
+          
           var predictedClass = data.predicted_class;
-          // Map predicted class to disease
+          
           var diseases = {
             1: "akiec",
             2: "bcc",
@@ -132,7 +132,7 @@
             6: "nv",
             7: "vasc"
           };
-          // Display the predicted disease
+          
           var predictedDisease = diseases[predictedClass];
           document.getElementById("predictedDisease").innerText = "Predicted Disease: " + predictedDisease;
         })
